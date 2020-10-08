@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Nenhum direito reservado. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Escrevendo o e-mail (SMTP SMTP Manual)</title>
+
+<meta name="description" content="Escrevendo o e-mail (SMTP SMTP Manual)">
+<meta name="keywords" content="Escrevendo o e-mail (SMTP SMTP Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Mandando-um-e_002dmail.html" rel="up" title="Mandando um e-mail">
+<link href="Enviando-o-e_002dmail.html" rel="next" title="Enviando o e-mail">
+<link href="Dominio-e-Porta.html" rel="prev" title="Domínio e Porta">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt_BR">
+<span id="Escrevendo-o-e_002dmail"></span><div class="header">
+<p>
+Pr&oacute;ximo: <a href="Enviando-o-e_002dmail.html" accesskey="n" rel="next">Enviando o e-mail</a>, Anterior: <a href="Dominio-e-Porta.html" accesskey="p" rel="prev">Domínio e Porta</a>, Acima: <a href="Mandando-um-e_002dmail.html" accesskey="u" rel="up">Mandando um e-mail</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Escrevendo-o-e_002dmail-1"></span><h3 class="section">2.3 Escrevendo o e-mail</h3>
+<p>Primeiramente será pedido um endereço de destinatário, <strong>qualquer endereço é válido</strong>,
+uma vez que o servidor de <acronym>DNS</acronym> retornará o IP para servidores nas redes externas,
+graças ao pacote <strong>requests</strong>. Esta regra vale tanto para o destinatário, quanto
+para o remetente.
+<strong>Entretanto, o servidor externo pode negar qualquer tentativa de conexão, podendo,
+então levar a aplicação para o estado de erro.</strong>
+</p>
+<span id="Corpo-e-assunto-da-mensagem"></span><h4 class="subsection">2.3.1 Corpo e assunto da mensagem</h4>
+<p>Tanto o corpo quanto o assunto das mensagens do e-mail atual podem ser escritos com
+qualquer que o usuário desejar <em>charset</em>, como <acronym>UTF-8</acronym>.
+</p>
+<span id="Anexos"></span><h4 class="subsection">2.3.2 Anexos</h4>
+<p>O caminho do anexo a ser enviado <strong>DEVE</strong> ser absoluto,
+como:
+</p><div class="example">
+<pre class="example">/home/&lt;usuario&gt;/foto_de_casamento.png
+</pre></div>
+
+<p>Também é recomendado que não
+hajam espaços presentes no nome do arquivo. É necessário digitar 0 caso não se
+é desejado ter mais anexos.
+</p>
+
+
+
+</body>
+</html>

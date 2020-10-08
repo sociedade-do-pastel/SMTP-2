@@ -1,0 +1,4 @@
+#+title: SMTP SMTP (Servidor Mega Tecnológico Perfeito)
+
+* Informações
+Para acessar as informações, consulte a pasta [[https://github.com/sociedade-do-pastel/SMTP-2/info][info]] ou a [[https://github.com/sociedade-do-pastel/SMTP-2/info/doc_smtp.html/index.html][documentação]].

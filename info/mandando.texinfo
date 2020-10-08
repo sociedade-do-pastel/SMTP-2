@@ -1,0 +1,60 @@
+@node Mandando um e-mail
+@chapter Mandando um e-mail
+Como determinar a quantidade
+de servidores bem como os seus domínios de destinatário e remetente.
+Como determinar as portas destes servidores e como enviar o(s) e-mail(s).
+
+@node Determinando a quantidade de servidores
+@section Determinando a quantidade de servidores
+O usuário pode inserir a quantidade qualquer de servidores os quais quiser
+instanciar, uma vez que haja memória disponível para tal ação.
+
+@node Domínio e Porta
+@section Domínio e Porta
+Após determinar a quantia de servidores que desejar, o usuário ainda pode
+determinar o ``pseudo-domínio'' para cada um deles @strong{(É recomendado que não sejam utilizados carácteres que não sejam ASCII)}.
+Estes serão, posteriormente, registrados no arquivo @file{dominios.txt}. Logo após digitar
+a @emph{string} de domínio, o usuário deverá escolher uma porta que este servidor
+terá que reservar internamente. Se esta escolhida já estiver em uso pelo sistema/usuário,
+o programa entrará em estado de @strong{falha}. É recomendada a utilização de uma porta
+não reservada ou que esteja ligada a um protocolo já existente como @command{ssh}.
+
+O sucesso da instanciação do novo servidor será mostrado no @emph{stdout}
+com o seguinte padrão:
+
+@example
+Servidor rodando [porta <porta1>]
+Servidor rodando [porta <porta2>]
+.
+.
+.
+@end example
+
+@node Escrevendo o e-mail
+@section Escrevendo o e-mail
+Primeiramente será pedido um endereço de destinatário, @strong{qualquer endereço é válido},
+uma vez que o servidor de @acronym{DNS} retornará o IP para servidores nas redes externas,
+graças ao pacote @strong{requests}. Esta regra vale tanto para o destinatário, quanto
+para o remetente.
+@strong{Entretanto, o servidor externo pode negar qualquer tentativa de conexão, podendo,
+então levar a aplicação para o estado de erro.}
+
+@subsection Corpo e assunto da mensagem
+Tanto o corpo quanto o assunto das mensagens do e-mail atual podem ser escritos com
+qualquer que o usuário desejar @emph{charset}, como @acronym{UTF-8}.
+
+@subsection Anexos
+O caminho do anexo a ser enviado @strong{DEVE} ser absoluto,
+como:
+@example
+/home/<usuario>/foto_de_casamento.png
+@end example
+
+Também é recomendado que não
+hajam espaços presentes no nome do arquivo. É necessário digitar 0 caso não se
+é desejado ter mais anexos.
+
+@node Enviando o e-mail
+@section Enviando o e-mail
+Após todos os passos terem sido seguidos corretamente, o e-mail será enviado
+para o destinatário desejado.

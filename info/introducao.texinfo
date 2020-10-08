@@ -1,0 +1,31 @@
+@node Introdução 
+@chapter Introdução
+
+@section Execução
+O @emph{script} se encontra na raiz do projeto, nomeado
+simplesmente como @file{script.py}, para se executar em
+sistemas GNU/Linux, basta chamar o executável do @strong{Python versão 3}.
+
+Em distribuições baseadas em Debian, o comando deve incluir a versão específica do
+Python @command{python3}. Logo, o comando final seria @command{python3 script.py}.
+
+O usuário será recebido, primeiramente, com um @emph{prompt} para definir
+o número de servidores SMTP que deseja. 
+
+@section Dependências
+O programa em si depende dos seguintes módulos/APIs para o seu funcionamento
+correto:
+
+@enumerate
+@item
+@strong{requests}: Para a simulação do banco de domínios de um servidor DNS
+
+@item
+@strong{stmplib}: Para as funções/métodos relacionados ao envio e recebimento de e-mails
+para um determinado endereço IP. 
+
+@end enumerate
+
+Caso nenhuma dessas dependências estejam instaladas, basta utilizar-se do @emph{package manager pip},
+cuja ação para instalação de um pacote pode ser chamada com a opção @command{pip install}.
+
